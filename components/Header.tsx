@@ -30,22 +30,24 @@ const Header: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo Section - Mimicking the colorful Neuralign logo */}
+          {/* Logo Section - Matching the Neuralign Brazil image colors */}
           <Link to="/" className="flex items-center group no-underline">
-            <div className="flex items-baseline text-3xl font-bold tracking-tight">
-              <span className="text-orange-400">N</span>
-              <span className="text-orange-400">E</span>
-              <span className="text-primary">U</span>
-              <span className="text-primary">R</span>
-              <span className="text-primary">A</span>
-              <span className="text-primary">L</span>
-              <span className="text-primary">I</span>
-              <span className="text-primary">9</span>
-              <span className="text-green-600 ml-0.5 relative flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-600 bg-green-600 text-white text-sm overflow-hidden">
-                <div className="absolute inset-0 bg-yellow-400 transform rotate-45 scale-75"></div>
-                <div className="absolute inset-0 bg-blue-700 rounded-full scale-50"></div>
-                <span className="relative z-10 text-[10px] font-bold">BR</span>
-              </span>
+            <div className="flex items-baseline text-3xl md:text-4xl font-bold tracking-tight lowercase font-sans">
+              <span className="text-[#fabc4e]">n</span>
+              <span className="text-[#f48b57]">e</span>
+              <span className="text-[#ef5a63]">u</span>
+              <span className="text-[#e0446b]">r</span>
+              <span className="text-[#a4619d]">a</span>
+              <span className="text-[#715594]">l</span>
+              <span className="text-[#514686]">i</span>
+              <span className="text-[#383c76]">g</span>
+              <span className="text-[#1f275b]">n</span>
+              <div className="ml-1.5 mb-1 relative flex items-center justify-center w-8 h-8 rounded-full bg-green-600 shadow-sm overflow-hidden border border-green-700">
+                <div className="absolute w-5 h-5 bg-yellow-400 transform rotate-45"></div>
+                <div className="absolute w-3 h-3 bg-blue-800 rounded-full z-10 flex items-center justify-center">
+                   <div className="w-full h-[1px] bg-white transform -rotate-12 opacity-80"></div>
+                </div>
+              </div>
             </div>
           </Link>
 

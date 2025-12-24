@@ -8,15 +8,22 @@ const Home: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative w-full h-[600px] lg:h-[700px] bg-slate-900 overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image 
+            Updated to use the specific requested image.
+            Added object-right-top positioning to ensure the girl (subject) is visible and not covered by the text card on the left.
+            Added a fallback to a similar online image if the local file is missing.
+        */}
         <img 
-          src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=2070&auto=format&fit=crop" 
-          alt="Criança sorridente estudando" 
-          className="absolute inset-0 w-full h-full object-cover object-top opacity-90"
+          src="garotinha-sorridente-em-casa-durante-escola-online-com-laptop.jpg"
+          onError={(e) => {
+            e.currentTarget.src = "https://img.freepik.com/premium-photo/smiling-little-girl-home-during-online-school-with-laptop_155003-43187.jpg?w=1380"; // Fallback visualmente idêntico/similar
+          }}
+          alt="Garotinha sorridente em casa durante escola online com laptop" 
+          className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-right-top opacity-90"
         />
         
-        {/* Gradient Overlay for better text readability if needed, though the card handles it */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent pointer-events-none"></div>
+        {/* Gradient Overlay adjusted to make text more readable while keeping image visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent pointer-events-none"></div>
 
         <div className="container mx-auto px-4 sm:px-6 relative h-full flex items-center">
           <div className="relative w-full lg:w-1/2">
@@ -27,7 +34,6 @@ const Home: React.FC = () => {
                <span className="text-xl font-extrabold leading-none">ESSA</span>
                <span className="text-[10px] font-bold">Level 1</span>
                <span className="text-[10px]">Evidence</span>
-               {/* Zigzag border effect simulation or just use a simple circle for CSS simplicity */}
             </div>
 
             {/* Glass Card */}
