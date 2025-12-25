@@ -10,8 +10,7 @@ export interface DemoFormData {
 export enum UserType {
   PROVIDER = 'Provedor',
   CLIENT = 'Cliente',
-  PARENT = 'Mãe / Pai / Responsável',
-  SCHOOL = 'Escola'
+  PARENT = 'Mãe / Pai / Responsável'
 }
 
 export interface Testimonial {
